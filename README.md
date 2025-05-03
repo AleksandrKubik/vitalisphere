@@ -19,9 +19,17 @@ For deployment instructions, please refer to the `deployment.md` file which cont
 
 > **Technical Note**: This project includes all necessary files for Docker-based deployment (Dockerfile, docker-compose.yml, etc.). You can provide these files to your hosting provider for quick setup.
 
+## Live Demo
+
+This project is deployed on Netlify: [vitalisphere.netlify.app](https://vitalisphere.netlify.app/)
+
 ## Contact Information
 
 VITALISPHERE LIMITED
 2314, Nicosia, Cyprus, Glyfou, 29A
-Email: hello@vitalisphere.com
-Phone: +1 737-555-0188 
+Email: hello@vitalisphereltd.com
+Phone: +1 737-555-0188
+
+## License
+
+Copyright © 2025 VITALISPHERE LIMITED. All rights reserved. 

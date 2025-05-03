@@ -6,7 +6,7 @@
     <title>VITALISPHERE LIMITED - Premium Mobile Monetization Solutions</title>
     <meta name="description" content="VITALISPHERE LIMITED offers premium mobile monetization solutions including entertainment hubs, wellness services, and direct carrier billing for publishers and traffic owners.">
     <meta name="keywords" content="mobile monetization, carrier billing, entertainment hubs, wellness services, traffic monetization, revenue share, mobile payments">
-    <link rel="canonical" href="https://vitalisphere.com/">
+    <link rel="canonical" href="https://vitalisphereltd.com/">
     
     <!-- Favicon -->
     <link rel="icon" href="/static/favicon/favicon.ico">
@@ -16,20 +16,43 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vitalisphere.com/">
+    <meta property="og:url" content="https://vitalisphereltd.com/">
     <meta property="og:title" content="VITALISPHERE LIMITED - Premium Mobile Monetization Solutions">
     <meta property="og:description" content="We build entertainment portals and wellness services that turn every tap into carrier-billed revenue.">
-    <meta property="og:image" content="https://vitalisphere.com/static/img/hero-bg.jpg">
+    <meta property="og:image" content="https://vitalisphereltd.com/static/img/hero-bg.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vitalisphere.com/">
+    <meta property="twitter:url" content="https://vitalisphereltd.com/">
     <meta property="twitter:title" content="VITALISPHERE LIMITED - Premium Mobile Monetization Solutions">
     <meta property="twitter:description" content="We build entertainment portals and wellness services that turn every tap into carrier-billed revenue.">
-    <meta property="twitter:image" content="https://vitalisphere.com/static/img/hero-bg.jpg">
+    <meta property="twitter:image" content="https://vitalisphereltd.com/static/img/hero-bg.jpg">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
+    
+    <style>
+        /* WebP background support with fallback */
+        .hero {
+            background-image: url('/static/img/hero-bg.jpg');
+        }
+        
+        @supports (background-image: url('/static/img/webp/hero-bg.webp')) {
+            .hero {
+                background-image: url('/static/img/webp/hero-bg.webp');
+            }
+        }
+        
+        .who-we-are {
+            background-image: url('/static/img/who-we-are-bg.jpg');
+        }
+        
+        @supports (background-image: url('/static/img/webp/who-we-are-bg.webp')) {
+            .who-we-are {
+                background-image: url('/static/img/webp/who-we-are-bg.webp');
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -88,21 +111,30 @@
                         <h3>Entertainment Hubs</h3>
                         <p>HTML5 games, on-demand video content, and bite-size learning modules that captivate audience attention.</p>
                         <div class="service-stats">Long sessions, high LTV</div>
-                        <img src="/static/img/entertainment-hub.jpg" alt="VITALISPHERE Entertainment Hub with HTML5 games and video content">
+                        <picture>
+                            <source srcset="/static/img/webp/entertainment-hub.webp" type="image/webp">
+                            <img src="/static/img/entertainment-hub.jpg" alt="VITALISPHERE Entertainment Hub with HTML5 games and video content">
+                        </picture>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-spa icon-feature"></i>
                         <h3>Wellness Services</h3>
                         <p>Guided meditations, fitness challenges, and nutrition content designed to improve user well-being.</p>
                         <div class="service-stats">Attracts high-value audiences</div>
-                        <img src="/static/img/wellness-services.jpg" alt="VITALISPHERE Wellness Services including guided meditations and fitness challenges">
+                        <picture>
+                            <source srcset="/static/img/webp/wellness-services.webp" type="image/webp">
+                            <img src="/static/img/wellness-services.jpg" alt="VITALISPHERE Wellness Services including guided meditations and fitness challenges">
+                        </picture>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-credit-card icon-feature"></i>
                         <h3>Mobile-Payment Core</h3>
                         <p>Subscription & one-click payment integration through 60+ mobile network operators worldwide.</p>
                         <div class="service-stats">Up to <span class="highlight">92%</span> successful transactions</div>
-                        <img src="/static/img/mobile-payments.jpg" alt="VITALISPHERE Mobile Payment Solutions with carrier billing integration">
+                        <picture>
+                            <source srcset="/static/img/webp/mobile-payments.webp" type="image/webp">
+                            <img src="/static/img/mobile-payments.jpg" alt="VITALISPHERE Mobile Payment Solutions with carrier billing integration">
+                        </picture>
                     </div>
                 </div>
 
@@ -245,19 +277,28 @@
                         <i class="fas fa-mobile-alt mb-30 icon-feature"></i>
                         <h3 class="feature-title">Mobile-First DNA</h3>
                         <p class="feature-desc">UX engineered for conversion from the very first scroll</p>
-                        <img src="/static/img/mobile-first.jpg" alt="VITALISPHERE Mobile-First Technology for maximum conversion rates">
+                        <picture>
+                            <source srcset="/static/img/webp/mobile-first.webp" type="image/webp">
+                            <img src="/static/img/mobile-first.jpg" alt="VITALISPHERE Mobile-First Technology for maximum conversion rates">
+                        </picture>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-heart mb-30 icon-feature"></i>
                         <h3 class="feature-title">Wellness + Fun</h3>
                         <p class="feature-desc">combines high CTRs with long-term retention</p>
-                        <img src="/static/img/wellness-fun.jpg" alt="VITALISPHERE Wellness and Entertainment combined solutions">
+                        <picture>
+                            <source srcset="/static/img/webp/wellness-fun.webp" type="image/webp">
+                            <img src="/static/img/wellness-fun.jpg" alt="VITALISPHERE Wellness and Entertainment combined solutions">
+                        </picture>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-shield-alt mb-30 icon-feature"></i>
                         <h3 class="feature-title">Premium Compliance</h3>
                         <p class="feature-desc">PSD2, PCI-DSS, zero-fraud policy</p>
-                        <img src="/static/img/compliance.jpg" alt="VITALISPHERE Premium Compliance PSD2 and PCI-DSS standards">
+                        <picture>
+                            <source srcset="/static/img/webp/compliance.webp" type="image/webp">
+                            <img src="/static/img/compliance.jpg" alt="VITALISPHERE Premium Compliance PSD2 and PCI-DSS standards">
+                        </picture>
                     </div>
                 </div>
 
@@ -265,8 +306,8 @@
                 <div id="careers" class="careers">
                     <h3>Careers</h3>
                     <p>We're scaling fast—seeking media buyers, UA leads, and product managers.</p>
-                    <p>Send your résumé to <span class="email">jobs@vitalisphere.com</span> and help build the next-gen mobile experience with us.</p>
-                    <a href="mailto:jobs@vitalisphere.com" class="btn btn-outline" style="margin-top: 20px;">Apply Now →</a>
+                    <p>Send your résumé to <span class="email">jobs@vitalisphereltd.com</span> and help build the next-gen mobile experience with us.</p>
+                    <a href="mailto:jobs@vitalisphereltd.com" class="btn btn-outline" style="margin-top: 20px;">Apply Now →</a>
                 </div>
             </div>
         </section>
@@ -340,12 +381,15 @@
         <div class="container">
             <h2>Ready to monetize your traffic?</h2>
             <div class="contact-info">
-                <a href="mailto:hello@vitalisphere.com">hello@vitalisphere.com</a>
+                <a href="mailto:hello@vitalisphereltd.com">hello@vitalisphereltd.com</a>
                 <a href="tel:+17375550188">+1 737-555-0188</a>
                 <span>2314, Nicosia, Cyprus, Glyfou, 29A</span>
             </div>
-            <img src="/static/img/contact-us.jpg" alt="Contact VITALISPHERE LIMITED for mobile monetization partnerships" style="max-width: 300px; margin: 20px auto; border-radius: 4px; display: block;">
-            <a href="mailto:hello@vitalisphere.com" class="btn">Request Your Offer Today →</a>
+            <picture>
+                <source srcset="/static/img/webp/contact-us.webp" type="image/webp">
+                <img src="/static/img/contact-us.jpg" alt="Contact VITALISPHERE LIMITED for mobile monetization partnerships" style="max-width: 300px; margin: 20px auto; border-radius: 4px; display: block;">
+            </picture>
+            <a href="mailto:hello@vitalisphereltd.com" class="btn">Request Your Offer Today →</a>
         </div>
     </section>
 
@@ -371,8 +415,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "VITALISPHERE LIMITED",
-      "url": "https://vitalisphere.com",
-      "logo": "https://vitalisphere.com/static/img/logo.png",
+      "url": "https://vitalisphereltd.com",
+      "logo": "https://vitalisphereltd.com/static/img/logo.png",
       "description": "Premium digital-product studio crafting mobile portals that entertain, improve well-being, and generate steady cash flow.",
       "address": {
         "@type": "PostalAddress",
@@ -385,7 +429,7 @@
         "@type": "ContactPoint",
         "telephone": "+1-737-555-0188",
         "contactType": "customer service",
-        "email": "hello@vitalisphere.com"
+        "email": "hello@vitalisphereltd.com"
       },
       "sameAs": [
         "https://www.facebook.com/vitalisphere",
