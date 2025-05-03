@@ -1,6 +1,7 @@
-name = "vitalisphere"
+name = "vitalisphere-site"
 compatibility_date = "2025-05-03"
 main = "workers-site/index.js"
 
 [site]
-bucket = "./docs" 
+bucket = "./docs"
+site_root = "./docs" 
