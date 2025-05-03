@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vitalisphere.com/sitemap.xml 
