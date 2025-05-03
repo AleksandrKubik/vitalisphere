@@ -443,6 +443,9 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 4px;
     margin-top: 20px;
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Масштабирование с сохранением пропорций и обрезкой */
+    object-position: center; /* Позиционирование по центру */
 }
 
 .highlight {
@@ -698,6 +701,9 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 4px;
     margin-top: 20px;
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Масштабирование с сохранением пропорций и обрезкой */
+    object-position: center; /* Позиционирование по центру */
 }
 
 /* FAQ Section */
