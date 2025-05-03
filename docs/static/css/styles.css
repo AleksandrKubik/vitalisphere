@@ -815,66 +815,33 @@ nav ul li a:hover {
 .contact {
     background-color: #ffffff;
     padding: 80px 0;
+    text-align: center;
 }
 
 .contact h2 {
-    text-align: center;
-    margin-bottom: 15px;
     color: var(--dark-blue);
-}
-
-.section-subtitle {
+    margin-bottom: 30px;
+    font-size: 32px;
     text-align: center;
-    margin-bottom: 40px;
-    color: #555;
-    font-size: 18px;
-}
-
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.contact-image {
-    flex: 1;
-    min-width: 300px;
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-}
-
-.contact-method {
-    display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
+    margin-bottom: 30px;
 }
 
-.contact-icon {
-    font-size: 22px;
-    color: var(--accent-blue);
-    margin-top: 5px;
-}
-
-.contact-method h4 {
-    margin: 0 0 5px 0;
-    font-size: 18px;
-    color: var(--dark-blue);
-}
-
-.contact-method p {
-    margin: 0;
+.contact-info a, .contact-info span {
     color: var(--dark-gray);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.contact-cta {
-    margin-top: 20px;
+.contact-info a:hover {
+    color: var(--accent-blue);
 }
 
 .contact .btn {
@@ -886,6 +853,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
 .contact .btn:hover {
