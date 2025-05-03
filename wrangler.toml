@@ -1,6 +1,5 @@
 name = "vitalisphere"
 compatibility_date = "2025-05-03"
-main = "workers-site/index.js"
 
 [site]
 bucket = "./docs" 
