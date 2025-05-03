@@ -22,6 +22,11 @@ func main() {
 		http.ServeFile(w, r, "./static/sitemap.xml")
 	})
 
+	// Handle favicon
+	http.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "./static/favicon/favicon.ico")
+	})
+
 	// Handle main page
 	http.HandleFunc("/", indexHandler)
 

@@ -1,6 +1,0 @@
-{
-  "build": {
-    "output_directory": "./docs",
-    "root_directory": "."
-  }
-} 
