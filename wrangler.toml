@@ -1,0 +1,5 @@
+name = "vitalisphere"
+compatibility_date = "2025-05-03"
+
+[site]
+bucket = "./docs" 
