@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-gray-900 bg-gray-50;
+  }
+  
+  body {
+    @apply m-0 min-h-screen font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold font-['Poppins',_sans-serif];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-600 text-white hover:bg-gray-700;
+  }
+  
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Анимации для музыкального плеера */
+@keyframes waveAnimation {
+  0% {
+    height: 15%;
+  }
+  100% {
+    height: var(--wave-height, 80%);
+  }
+}
+
+@keyframes equalizer {
+  0% {
+    height: 4px;
+  }
+  50% {
+    height: 16px;
+  }
+  100% {
+    height: 4px;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-equalizer {
+  animation: equalizer 1.2s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 2s linear infinite;
+}
+
+.animate-wave {
+  animation: waveAnimation 1s infinite alternate ease-in-out;
+}
+
+.rhap_container {
+  background-color: rgba(15, 23, 42, 0.7) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 16px !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.rhap_progress-bar {
+  background-color: rgba(156, 163, 175, 0.3) !important;
+  height: 6px !important;
+  border-radius: 3px !important;
+}
+
+.rhap_progress-filled {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa) !important;
+  border-radius: 3px !important;
+}
+
+.rhap_progress-indicator {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+  width: 14px !important;
+  height: 14px !important;
+  top: -4px !important;
+  margin-left: -7px !important;
+}
+
+.rhap_controls-section {
+  margin-top: 12px !important;
+}
+
+.rhap_additional-controls button,
+.rhap_main-controls button {
+  color: white !important;
+  transition: transform 0.2s ease !important;
+}
+
+.rhap_additional-controls button:hover,
+.rhap_main-controls button:hover {
+  transform: scale(1.1) !important;
+}
+
+.rhap_play-pause-button {
+  font-size: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.rhap_time {
+  color: rgba(209, 213, 219, 0.9) !important;
+  font-size: 14px !important;
+}
+
+.rhap_volume-controls {
+  margin-right: 0 !important;
+}
+
+.rhap_volume-bar {
+  background-color: rgba(156, 163, 175, 0.3) !important;
+  border-radius: 2px !important;
+}
+
+.rhap_volume-indicator {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.music-category {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.music-category:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

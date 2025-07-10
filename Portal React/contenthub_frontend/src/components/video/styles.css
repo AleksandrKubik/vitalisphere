@@ -1,0 +1,131 @@
+/* Стили для видеоплеера и ленты видео */
+
+/* Скрываем стандартный скроллбар, но сохраняем функциональность */
+.video-feed {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE и Edge */
+}
+
+.video-feed::-webkit-scrollbar {
+  display: none; /* Chrome, Safari и Opera */
+}
+
+/* Стили для snap-скроллинга */
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.video-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Стили для индикатора прогресса видео */
+.progress-bar {
+  background: linear-gradient(90deg, #fff var(--progress, 0%), rgba(255, 255, 255, 0.2) var(--progress, 0%));
+  height: 3px;
+  width: 100%;
+  transition: background 0.2s linear;
+}
+
+/* Анимация загрузки видео */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.video-loading {
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+/* Кнопка возврата на главную */
+.home-button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 50;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Стили для контролов видео */
+.video-controls {
+  position: absolute;
+  bottom: 32px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.control-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* Индикаторы для навигации между видео */
+.video-navigation {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.video-navigation-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.video-navigation-dot.active {
+  background-color: white;
+  transform: scale(1.25);
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 640px) {
+  .video-controls {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+  }
+  
+  .video-container:active .video-controls {
+    opacity: 0.4;
+  }
+}

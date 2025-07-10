@@ -1,0 +1,160 @@
+/* Стили для видеоплеера */
+.video-player-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+  z-index: -1;
+}
+
+.video-info {
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.video-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.video-info.changing h2 {
+  opacity: 0.5;
+}
+
+.video-info .video-title-animation {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-info.changing .video-title-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Стилизация ползунка громкости */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Анимация для фона */
+.video-dots-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Стили для плеера */
+.react-player-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 45%; /* Уменьшенное соотношение сторон для ПК */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: #000;
+  margin-bottom: 1rem;
+  max-height: 60vh; /* Уменьшаем максимальную высоту */
+  max-width: 800px; /* Фиксированная максимальная ширина для ПК */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Стили для видео элемента */
+video {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .react-player-wrapper {
+    padding-top: 75%; /* Меняем соотношение сторон для мобильных */
+    max-height: 50vh;
+    max-width: 100%; /* На мобильных используем всю ширину */
+  }
+  
+  video {
+    max-height: 50vh;
+  }
+  
+  .video-player-container .flex-1 {
+    padding: 0.5rem;
+  }
+}
+
+/* Компактный плеер */
+.compact-controls {
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.compact-controls .progress-bar {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
